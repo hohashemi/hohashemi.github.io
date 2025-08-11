@@ -1,0 +1,209 @@
+{
+  "personalInfo": {
+    "name": "Hossein Hashemi Nasab",
+    "phone": ["+98 (21) 6616 81 67", "+98 (913) 347 05 81"],
+    "email": ["h.hashemi01@sharif.edu", "h.hasheminasab01@gmail.com"],
+    "address": "Sharif University of Technology, Azadi St., Tehran, Iran",
+    "scholar": ["scholar.google.com/h.hasheminasab", "https://scholar.google.com/citations?user=vIBUm-MAAAAJ&hl=en"],
+    "skype": "hossein.hasheminasab",
+    "telegeram": "https://t.me/hmihossein"
+  },
+  "researchInterests": [
+    "High-Order Computational Fluid Dynamics",
+    "Transition, Turbulence, and Boundary Layer Modeling",
+    "Lattice Boltzmann Method (LBM)",
+    "Physics-informed Neural Networks",
+    "Development of Numerical Methods for Solving Partial Differential Equation",
+    "High Performance Computing",
+    "Multi-Physics Aerodynamics Phenomenon (i.e. Reacting Flow, Plasma, Multiphase flow)",
+    "Optimization"
+  ],
+  "education": [
+    {
+      "degree": "Ph.D., Aerospace Eng., Aerodynamics",
+      "institution": "Sharif University of Technology",
+      "duration": "2017-2024",
+      "dissertation": "An Arbitrary Lagrangian-Eulerian Finite Volume Lattice Boltzmann Method for Computing Compressible Flows over Moving Bodies",
+      "supervisor": "Prof. Kazem Hejranfar"
+    },
+    {
+      "degree": "M.Sc., Aerospace Eng., Aerodynamics",
+      "institution": "Sharif University of Technology",
+      "duration": "2013-2017",
+      "dissertation": "Numerical Simulation of 2D Compressible Flow using Vorticity Confinement Method",
+      "supervisor": "Prof. Kazem Hejranfar"
+    },
+    {
+      "degree": "B.Sc., Aerospace Eng.",
+      "institution": "K. N. Toosi University of Technology",
+      "duration": "2009-2013",
+      "dissertation": "An Optimal Design for Supersonic Wind Tunnel Nozzle",
+      "supervisor": "Dr. Masoud Mirzaei"
+    }
+  ],
+  "researchExperiences": [
+    "Development of a Finite Volume Unstructured Solver for Compressible Euler/LB equations in Conjunction with Spring Analogy Mesh Movement Algorithm (Fortran)",
+    "Development of a GPU Parallelized Finite Volume Unstructured Solver for Compressible 3D Euler Equations (CUDA & C++)",
+    "Rotor Aerodynamics Analysis (ANSYS Fluent)",
+    "Development of Multi Rotor Aerodynamic Analysis Software using UVLM (Fortran)",
+    "Multi Rotor Blade Optimal Design using BEMT & MOGA (MATLAB)",
+    "Experimental Investigation on the Aerodynamic Performance of NLF-0414 Iced-Airfoil",
+    "Development of a Finite Difference WENO solver for compressible Euler Equations (C++)",
+    "Development of a Structured Elliptic Grid Generation software (C++)",
+    "Development of an Unstructured Grid Generation Software using Advancing Front Algorithm (C++)",
+    "Development of Discontinues Galerkin Solver for Wave Equation on An Unstructured Grid (C++ & Fortran)",
+    "Development of a Compact Finite Difference solver for hydrodynamic and thermal BL (C++)",
+    "Optimization of an airfoil-flap configuration using MOGA and a neural network as a surrogate model (ANSYS Fluent & MATLAB)"
+  ],
+  "publications": {
+    "journalPapers": [
+      {
+        "authors": "A. Ebrahimi, M. Hajipour, and H. Hashemi Nasab",
+        "title": "Experimental Investigation on the Aerodynamic Performance of NLF-0414 Iced-Airfoil",
+        "journal": "Journal of Applied Fluid Mechanics",
+        "volume": "9.2",
+        "year": "2015",
+        "doi": "10.18869/acadpub.jafm.68.225.24606"
+      },
+      {
+        "authors": "K. Hejranfar, H. Hashemi Nasab, and M. H. Azampour",
+        "title": "Arbitrary Lagrangian-Eulerian unstructured finite-volume lattice-Boltzmann method for computing two-dimensional compressible inviscid flows over moving bodies",
+        "journal": "Physical Review E",
+        "volume": "101.2",
+        "year": "2020",
+        "doi": "10.1103/PhysRevE.101.023308"
+      },
+      {
+        "authors": "H. Hashemi Nasab, K. Hejranfar, and M. H. Azampour",
+        "title": "Application of arbitrary Lagrangian-Eulerian unstructured finite volume lattice Boltzmann method to simulate compressible viscous flows over moving bodies",
+        "journal": "Meccanica",
+        "volume": "58.12",
+        "year": "2023",
+        "doi": "10.1007/s11012-023-01729-3"
+      },
+      {
+        "authors": "H. Hashemi Nasab, K. Hejranfar",
+        "title": "Preconditioned lattice Boltzmann method for steady inviscid and viscous compressible flows",
+        "status": "Under Review"
+      }
+    ],
+    "conferencePapers": [
+      {
+        "authors": "K. Hejranfar, H. Hashemi Nasab and M. Sadri",
+        "title": "Numerical Simulation of 2D Compressible Mixing Layer Flow using Vorticity Confinement Method",
+        "conference": "16th Conference of Iranian Aerospace Society",
+        "location": "KNTU, Tehran, Iran",
+        "year": "2016",
+        "language": "Persian"
+      },
+      {
+        "authors": "H. Hashemi Nasab, K. Hejranfar, and M. H. Azampour",
+        "title": "Simulation of Compressible Viscous Flow Using the Lattice Boltzmann Method using Finite Volume Unstructured Grids",
+        "conference": "19th Fluid Dynamics Conference",
+        "location": "SUT, Tehran, Iran",
+        "year": "2020",
+        "language": "Persian"
+      },
+      {
+        "authors": "K. Hejranfar, H. Hashemi Nasab",
+        "title": "Aerodynamic Analysis of Chinook CH-47 Rotor Blades in Hover Flight Using the Vortex Lattice Method and Free Wake Modeling",
+        "conference": "19th Conference of Iranian Aerospace Society",
+        "location": "PANHA, Tehran, Iran",
+        "year": "2021",
+        "language": "Persian"
+      }
+    ]
+  },
+  "teachingExperiences": [
+    {
+      "role": "Workshop Instructor",
+      "course": "Introduction to Computational Fluid Dynamics and Grid Generation using Commercially developed Solvers",
+      "institution": "Kajeh Nasir Toosi University of Technology",
+      "period": "Summer 2012"
+    },
+    {
+      "role": "Teaching Assistant",
+      "course": "Computational Fluid Dynamics I",
+      "institution": "Sharif University of Technology",
+      "lecturer": "Prof. K. Hejranfar",
+      "level": "Graduate Course",
+      "period": "Fall, 2018"
+    },
+    {
+      "role": "Teaching Assistant",
+      "course": "Advanced Viscous Fluid Flow",
+      "institution": "Sharif University of Technology",
+      "lecturer": "Prof. K. Hejranfar",
+      "level": "Graduate Course",
+      "period": "Fall, 2017"
+    },
+    {
+      "role": "Teaching Assistant",
+      "course": "Heat Transfer I",
+      "institution": "Sharif University of Technology",
+      "lecturer": "Prof. K. Hejranfar",
+      "level": "Undergrad Course",
+      "period": "Winter, 2019"
+    },
+    {
+      "role": "Teaching Assistant",
+      "course": "Fluid Mechanics",
+      "institution": "Sharif University of Technology",
+      "lecturer": "Prof. K. Hejranfar",
+      "level": "Undergrad Course",
+      "period": "Winter, 2018"
+    },
+    {
+      "role": "Teaching Assistant",
+      "course": "Advanced Computational Grid Generation",
+      "institution": "Sharif University of Technology",
+      "lecturer": "Prof. K. Hejranfar",
+      "level": "Graduate Course",
+      "period": "Winter, 2021"
+    }
+  ],
+  "skills": {
+    "expert": [
+      "Computational Fluid Dynamics (FDM, FVM and F/SEM)",
+      "Object Oriented and Procedural Programming (C++)",
+      "Procedural Programming using Free/Fixed Form Fortran",
+      "Fluid Flow Simulation (Compressible/Incompressible, Steady/Unsteady Internal/External using Fluent®)",
+      "2D/3D Grid Generation (Gambit®, Ansys Meshing, and Pointwise®)",
+      "MATLAB® programming"
+    ],
+    "skilled": [
+      "Python programming",
+      "Parallel computing (Implementing OMP/MPI for CPU and CUDA for GPGPU in C++ and Fortran)",
+      "High-Level Mathematical Programming Software (Maple® and Mathematica®)"
+    ],
+    "experienced": [
+      "Version Control (Git)",
+      "OpenFoam",
+      "JavaScript, css, and html"
+    ]
+  },
+  "languageSkills": {
+    "English": "Fluent",
+    "Persian": "Native"
+  },
+  "references": [
+    {
+      "name": "Dr. Kazem Hejranfar",
+      "email": "khejran@sharif.edu",
+      "homepage": "http://ae.sharif.edu/~portal/faculty/1308558752",
+      "phone": "+98 21 6616 8100"
+    },
+    {
+      "name": "Dr. Azadeh Kebriaee",
+      "email": "kebriaee@sharif.edu",
+      "homepage": "http://ae.sharif.edu/~portal/faculty/1958968283",
+      "phone": "+98 21 6616 4600"
+    },
+    {
+      "name": "Dr. Majid Hajipour",
+      "email": "hajipourm@ut.ac.ir",
+      "homepage": "https://profile.ut.ac.ir/~hajipourm/",
+      "phone": "+98 21 6616 8167"
+    }
+  ]
+}

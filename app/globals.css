@@ -1,26 +1,593 @@
-@import "tailwindcss";
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,400;0,700;1,400;1,700&family=Ovo&display=swap');
 
+/* Light mode variables */
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --bg-color: white;
+  --text-color: black;
+  --container-bg: white;
+  --section-bg: lightgray;
+  --nav-bg: linear-gradient(135deg, #2c3e50, #34495e);
+  --nav-button-bg: rgba(255, 255, 255, 0.1);
+  --nav-button-hover: rgba(255, 255, 255, 0.2);
+  --nav-button-border: rgba(255, 255, 255, 0.3);
+  --section-title-border: black;
+  --link-color: #0066cc;
+  --mobile-header-bg: #2c3e50;
 }
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+/* Dark mode variables */
+.dark-mode {
+  --bg-color: #1a1a1a;
+  --text-color: #e0e0e0;
+  --container-bg: #2d2d2d;
+  --section-bg: #3d3d3d;
+  --nav-bg: linear-gradient(135deg, #1a2530, #253545);
+  --nav-button-bg: rgba(255, 255, 255, 0.1);
+  --nav-button-hover: rgba(255, 255, 255, 0.3);
+  --nav-button-border: rgba(255, 255, 255, 0.2);
+  --section-title-border: #e0e0e0;
+  --link-color: #66b3ff;
+  --mobile-header-bg: #1a2530;
 }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: 'Lato', sans-serif;
+  font-size: 14pt;
+  line-height: 1.2;
+  background-color: var(--bg-color);
+  margin: 0;
+  padding: 0;
+  color: var(--text-color);
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.cv-container {
+  min-height: 29.7cm;
+  margin: 0 auto;
+  padding: 32px 100px;
+  background: var(--container-bg);
+  color: var(--text-color);
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* Mobile Header */
+.mobile-header {
+  display: none;
+  position: sticky;
+  top: 0;
+  background: var(--mobile-header-bg);
+  padding: 15px 20px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+  z-index: 101;
+}
+
+.mobile-header-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.mobile-name {
+  font-family: 'Ovo', serif;
+  font-size: 18pt;
+  font-weight: bold;
+  color: white;
+  margin: 0;
+}
+
+.mobile-menu-toggle {
+  background: none;
+  border: none;
+  color: white;
+  font-size: 24px;
+  cursor: pointer;
+  padding: 5px;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Ribbon Navigation */
+.ribbon-nav {
+  position: sticky;
+  top: 0;
+  background: var(--nav-bg);
+  padding: 10px 0;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+  z-index: 100;
+  width: 100%;
+}
+
+.nav-buttons {
+  display: flex;
+  justify-content: center;
+  flex-wrap: nowrap;
+  gap: 7px;
+  max-width: 6000px;
+  margin: 0 auto;
+  padding: 0 10px;
+  overflow-x: auto;
+  scrollbar-width: none; /* Firefox */
+}
+
+.nav-buttons::-webkit-scrollbar {
+  display: none; /* Chrome, Safari, Opera */
+}
+
+.nav-button {
+  background: var(--nav-button-bg);
+  color: white;
+  border: 1px solid var(--nav-button-border);
+  padding: 6px 8px;
+  border-radius: 20px;
+  font-family: 'Lato', sans-serif;
+  font-size: 10pt;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  text-transform: uppercase;
+  white-space: nowrap;
+  flex-shrink: 0;
+}
+
+.nav-button:hover {
+  background: var(--nav-button-hover);
+  scale: 1.05;
+}
+
+.nav-button:active {
+  transform: translateY(0);
+}
+
+.nav-button.active {
+  background: rgba(255, 255, 255, 0.3);
+  font-weight: bold;
+  transform: scale(1.05);
+}
+
+/* Dark mode toggle button specific styles */
+.dark-mode-toggle {
+  background: rgba(0, 0, 0, 0.2);
+}
+
+.dark-mode .dark-mode-toggle {
+  background: rgba(255, 255, 255, 0.2);
+}
+
+.name {
+  font-family: 'Ovo', serif;
+  font-size: 24pt;
+  font-weight: bold;
+  margin-bottom: 8pt;
+  color: var(--text-color);
+  padding-top: 20px;
+}
+
+.section-title {
+  font-family: 'Ovo', serif;
+  font-weight: bold;
+  text-transform: uppercase;
+  border-bottom: 1.5px solid var(--section-title-border);
+  padding-bottom: 2px;
+  margin-top: 64px;
+  margin-bottom: 6px;
+  font-size: 20px;
+  color: var(--text-color);
+}
+
+.desktop-name {
+  display: block;
+}
+
+.personal-info {
+  text-align: left;
+  margin-bottom: 12px;
+}
+
+.contact-info {
+  font-size: 18px;
+  margin-bottom: 12px;
+  color: var(--text-color);
+}
+
+.contact-label {
+  font-weight: bold;
+  color: var(--text-color);
+}
+
+.research-interests {
+  columns: 3;
+  column-gap: 40px;
+  margin-bottom: 30px;
+  padding: 16px 15px 16px 64px;
+  font-family: 'Lato', sans-serif;
+  line-height: 1.1;
+  background-color: var(--section-bg);
+  border-radius: 20px;
+  color: var(--text-color);
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.research-interests li {
+  list-style-type: "📌 ";
+  break-inside: avoid;
+  margin-bottom: 25px;
+  color: var(--text-color);
+  font-family: 'Lato', sans-serif;
+  transition: all 0.3s ease;
+  border-radius: 10px;
+}
+
+.research-interests li:hover {
+  font-size: bold;
+  scale: 1.03;
+}
+
+.education-Section, .experience-Section, .publication-Section {
+  margin-bottom: 30px;
+  padding: 16px 64px;
+  font-family: 'Lato', sans-serif;
+  line-height: 1.8;
+  background-color: var(--section-bg);
+  border-radius: 20px;
+  color: var(--text-color);
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.teaching-Section {
+  margin-bottom: 30px;
+  padding: 16px 64px;
+  font-family: 'Lato', sans-serif;
+  line-height: 1.8;
+  background-color: var(--section-bg);
+  border-radius: 20px;
+  color: var(--text-color);
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.publication-Section {
+  padding: 5px 10px 5px 20px;
+  margin-bottom: 8pt;
+  font-family: 'Lato', sans-serif;
+}
+
+.publication-Section h4 {
+  margin-bottom: 8px;
+  font-family: 'ovo', sans-serif;
+  color: var(--text-color);
+}
+
+.education-item {
+  list-style-type: "🎓 ";
+  margin-bottom: 8pt;
+  color: var(--text-color);
+  font-family: 'Lato', sans-serif;
+  transition: all 0.3s ease;
+}
+
+.experience-item {
+  list-style-type: "✈  ";
+  margin-bottom: 8pt;
+  color: var(--text-color);
+  font-family: 'Lato', sans-serif;
+  transition: all 0.3s ease;
+}
+
+.publication-item {
+  list-style-type: "🔎 ";
+  margin-bottom: 8pt;
+  color: var(--text-color);
+  font-family: 'Lato', sans-serif;
+  transition: all 0.3s ease;
+}
+
+.teaching-item {
+  list-style-type: "🚀  ";
+  margin-bottom: 8pt;
+  color: var(--text-color);
+  font-family: 'Lato', sans-serif;
+  transition: all 0.5s ease;
+}
+
+.education-item:hover, .experience-item:hover, .publication-item:hover, .teaching-item:hover{
+  font-weight: bold;
+  scale:1.03;
+}
+
+.education-item ul {
+  list-style-type: " ";
+  margin-top: 2pt;
+  margin-bottom: 6pt;
+  padding-left: 15pt;
+}
+
+.bullet-list {
+  list-style-type: "🛸  ";
+  margin-bottom: 30px;
+  padding: 16px 64px;
+  font-family: 'Lato', sans-serif;
+  line-height: 1.8;
+  background-color: var(--section-bg);
+  border-radius: 20px;
+  color: var(--text-color);
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.bullet-list li {
+  margin-bottom: 15px;
+  color: var(--text-color);
+  font-family: 'Lato', sans-serif;
+  transition: all 0.5s ease;
+}
+
+.skills-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2px;
+  margin-top: 8px;
+}
+
+.skill-category {
+  padding: 0px 5px 10px 50px;
+  margin-bottom: 10px;
+  line-height: 1.5;
+  background-color: var(--section-bg);
+  border-radius: 20px;
+  color: var(--text-color);
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.skill-category h4 {
+  font-weight: bold;
+  margin-bottom: 0pt;
+  color: var(--text-color);
+  font-family: 'ovo', sans-serif;
+}
+
+.skill-category ul {
+  list-style-type: "🚀  ";
+  margin-top: 0;
+  margin-bottom: 0;
+  padding-left: 0px;
+}
+
+.skill-category li {
+  margin-bottom: 15px;
+  color: var(--text-color);
+  font-family: 'Lato', sans-serif;
+  transition: all 0.5s ease;
+}
+
+.skill-category li:hover {
+  font-weight: bold;
+  scale:1.03;
+}
+
+/* Section styling for scroll targets */
+.section {
+  scroll-margin-top: 70px;
+}
+
+/* Mobile Navigation Styles */
+@media (max-width: 768px) {
+  .mobile-header {
+    display: block;
+  }
+  
+  .ribbon-nav {
+    position: fixed;
+    top: 60px;
+    left: 0;
+    width: 100%;
+    height: calc(100vh - 60px);
+    transform: translateX(-100%);
+    transition: transform 0.3s ease;
+    padding: 0;
+    overflow-y: auto;
+  }
+  
+  .ribbon-nav.mobile-open {
+    transform: translateX(0);
+  }
+  
+  .nav-buttons {
+    flex-direction: column;
+    align-items: stretch;
+    padding: 20px;
+    gap: 10px;
+  }
+  
+  .nav-button {
+    width: 100%;
+    text-align: left;
+    font-size: 12pt;
+    padding: 12px 15px;
+    border-radius: 10px;
+  }
+  
+  .cv-container {
+    padding: 20px 15px;
+    margin-top: 60px;
+  }
+  
+  .name {
+    font-size: 20pt;
+    padding-top: 10px;
+  }
+  
+  .desktop-name {
+    display: none;
+  }
+  
+  .contact-info {
+    font-size: 14px;
+  }
+  
+  .section-title {
+    font-size: 14pt;
+    margin-top: 40px;
+  }
+  
+  .research-interests {
+    columns: 1;
+    padding: 10px 10px 10px 32px;
+  }
+  
+  .research-interests li {
+    margin-bottom: 15px;
+  }
+  
+  .education-Section, .experience-Section, .publication-Section {
+    padding: 10px 10px 10px 32px;
+  }
+  
+  .bullet-list {
+    padding: 10px 10px 10px 32px;
+  }
+  
+  .skills-grid {
+    grid-template-columns: 1fr;
+    gap: 10px 10px 10px 32px;
+  }
+  
+  .skill-category {
+    padding: 10px 10px 10px 32px;
+  }
+  
+  .education-item, .experience-item, .publication-item, .teaching-item {
+    margin-bottom: 12px;
+  }
+  
+  .section {
+    scroll-margin-top: 100px;
+  }
+}
+
+/* Add these styles to your existing CSS */
+
+.contact-link {
+  color: var(--link-color);
+  text-decoration: none;
+  border-bottom: 1px dotted currentColor;
+  transition: all 0.3s ease;
+}
+
+.contact-link:hover {
+  color: var(--link-color);
+  border-bottom: 1px solid currentColor;
+  opacity: 0.8;
+}
+
+.contact-link:active {
+  opacity: 0.6;
+}
+
+/* Dark mode specific link styles */
+.dark-mode .contact-link {
+  color: var(--link-color);
+}
+
+.dark-mode .contact-link:hover {
+  color: var(--link-color);
+}
+
+/* Print styles for links */
+@media print {
+  .contact-link {
+    color: black !important;
+    border-bottom: none;
+    text-decoration: underline;
+  }
+  
+  .contact-link:hover {
+    opacity: 1;
+  }
+}
+
+/* Mobile-specific link styles */
+@media (max-width: 768px) {
+  .contact-link {
+    font-size: 14px;
+  }
+}
+
+/* Tablet Styles */
+@media (min-width: 769px) and (max-width: 1024px) {
+  .cv-container {
+    padding: 25px 30px;
+  }
+  
+  .skills-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  
+  .research-interests {
+    columns: 2;
+  }
+  
+  .nav-button {
+    font-size: 9pt;
+    padding: 5px 6px;
+  }
+}
+
+/* Large Mobile Styles */
+@media (max-width: 480px) {
+  .contact-info {
+    font-size: 12px;
+    margin-bottom: 8px;
+  }
+  
+  .section-title {
+    font-size: 13pt;
+    margin-top: 30px;
+  }
+  
+  .education-Section, .experience-Section, .publication-Section {
+    padding: 12px;
+  }
+  
+  .bullet-list {
+    padding: 12px;
+  }
+  
+  .skill-category {
+    padding: 12px;
+  }
+}
+
+@media print {
+  .mobile-header {
+    display: none;
+  }
+  
+  .ribbon-nav {
+    display: none;
+  }
+  
+  .cv-container {
+    margin: 0;
+    padding: 0 1.5px 1.5px 1.5px;
+    background: white;
+    color: black;
+    margin-top: 0;
+  }
+  
+  body {
+    background-color: white;
+    color: black;
+  }
+  
+  @page {
+    margin: 1.5cm;
+  }
+  
+  /* Reset dark mode for printing */
+  .dark-mode {
+    --bg-color: white;
+    --text-color: black;
+    --container-bg: white;
+    --section-bg: lightgray;
+  }
 }

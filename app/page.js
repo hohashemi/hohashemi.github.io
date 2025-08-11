@@ -220,7 +220,7 @@ export default function AcademicCV() {
             <ul className="bullet-list">
               {resumeData.publications.journalPapers.map((paper, index) => (
                 <li key={index} className="publication-item">
-                   {paper.authors}. "{paper.title}". {paper.journal} {paper.volume} ({paper.year}). 
+                   {paper.authors}. &quot;{paper.title}&quot;. {paper.journal} {paper.volume} ({paper.year}). 
                   {paper.doi ? ` DOI: ${paper.doi}` : ''}{paper.status ? ` ${paper.status}.` : '.'}
                 </li>
               ))}
@@ -245,7 +245,7 @@ export default function AcademicCV() {
           <ul className="teaching-Section">
             {resumeData.teachingExperiences.map((teaching, index) => (
               <li key={index} className="teaching-item">
-                 {teaching.role}: "{teaching.course}",  {teaching.institution}  Lecturer: {teaching.lecturer}  {teaching.level}  {teaching.period}
+                 {teaching.role}: &quot;{teaching.course}&quot;,  {teaching.institution}  Lecturer: {teaching.lecturer}  {teaching.level}  {teaching.period}
               </li>
             ))}
           </ul>

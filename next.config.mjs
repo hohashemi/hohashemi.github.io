@@ -1,4 +1,8 @@
+// next.config.mjs
 /** @type {import('next').NextConfig} */
-const nextConfig = {};
+const nextConfig = {
+  trailingSlash: true,
+  reactStrictMode: true,
+};
 
 export default nextConfig;

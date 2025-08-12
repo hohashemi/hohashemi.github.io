@@ -202,16 +202,6 @@ export default function AcademicCV() {
           </ul>
         </div>
 
-        {/* Research Experiences */}
-        <div id="research-experiences" className="section">
-          <div className="section-title">Research Experiences:</div>
-          <ul className="experience-Section">
-            {resumeData.researchExperiences.map((experience, index) => (
-              <li key={index} className="experience-item"> {experience}</li>
-            ))}
-          </ul>
-        </div>
-
         {/* Publications */}
         <div id="publications" className="section">
           <div className="section-title">Publications:</div>
@@ -220,8 +210,16 @@ export default function AcademicCV() {
             <ul className="bullet-list">
               {resumeData.publications.journalPapers.map((paper, index) => (
                 <li key={index} className="publication-item">
-                   {paper.authors}. &quot;{paper.title}&quot;. {paper.journal} {paper.volume} ({paper.year}). 
-                  {paper.doi ? ` DOI: ${paper.doi}` : ''}{paper.status ? ` ${paper.status}.` : '.'}
+                  {paper.authors}. 
+                  &quot;{paper.title}&quot;. 
+                  {paper.journal} 
+                  {paper.volume} 
+                  {paper.year ? ` (${paper.year}).` : ''} 
+                  {paper.doi ? ` DOI: ` : ''}
+                  <a href={`https://doi.org/${paper.doi}`} target="_blank" rel="noopener noreferrer" className="contact-link">
+                    {paper.doi}
+                  </a>
+                  {paper.status ? ` ${paper.status}.` : '.'}
                 </li>
               ))}
             </ul>
@@ -232,12 +230,29 @@ export default function AcademicCV() {
             <ul className="bullet-list">
               {resumeData.publications.conferencePapers.map((paper, index) => (
                 <li key={index} className="publication-item">
-                   {paper.authors}, {paper.title}, {paper.conference}, {paper.location}, {paper.year} ({paper.language}).
+                   {paper.authors},&nbsp; 
+                   &quot;{paper.title}&quot;&nbsp;, 
+                   {paper.conference},&nbsp; 
+                   {paper.location}, &nbsp;
+                   {paper.year} &nbsp;
+                   ({paper.language}).
                 </li>
               ))}
             </ul>
           </div>
         </div>
+
+        {/* Research Experiences */}
+        <div id="research-experiences" className="section">
+          <div className="section-title">Research Experiences:</div>
+          <ul className="experience-Section">
+            {resumeData.researchExperiences.map((experience, index) => (
+              <li key={index} className="experience-item"> {experience}</li>
+            ))}
+          </ul>
+        </div>
+
+
 
         {/* Teaching Experiences */}
         <div id="teaching-experiences" className="section">

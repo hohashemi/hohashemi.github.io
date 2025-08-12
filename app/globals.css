@@ -544,16 +544,19 @@ body {
     margin-top: 30px;
   }
   
-  .education-Section, .experience-Section, .publication-Section {
-    padding: 12px;
+  .education-Section, .experience-Section, .teaching-Section {
+    padding: 12px 12px 12px 32px;
   }
   
+  .publication-Section {
+    padding: 12px 5px 12px 5px;
+  }
   .bullet-list {
-    padding: 12px;
+    padding: 12px 12px 12px 32px;
   }
   
   .skill-category {
-    padding: 12px;
+    padding: 12px 12px 12px 35px;
   }
 }
 

@@ -3,6 +3,7 @@
 import { useState, useEffect } from 'react';
 import './globals.css';
 import resumeData from '../resume.json';
+import Meta from '../components/Meta.js';
 
 export default function AcademicCV() {
   const [activeSection, setActiveSection] = useState('');
@@ -79,6 +80,7 @@ export default function AcademicCV() {
 
   return (
     <div>
+      <Meta title="Hossein Hashemi Nasab | Fluid Dynamics Researcher" description="Official website of Hossein Hasheminasab, LBM." />
       {/* Mobile Header */}
       <div className="mobile-header">
         <div className="mobile-header-content">

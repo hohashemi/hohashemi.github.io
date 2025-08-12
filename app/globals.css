@@ -206,7 +206,7 @@ body {
   background-color: var(--section-bg);
   border-radius: 20px;
   color: var(--text-color);
-  transition: background-color 0.3s ease, color 0.3s ease;
+  /* transition: background-color 0.3s ease, color 0.3s ease; */
 }
 
 .research-interests li {
@@ -215,12 +215,12 @@ body {
   margin-bottom: 25px;
   color: var(--text-color);
   font-family: 'Lato', sans-serif;
-  transition: all 0.3s ease;
+  transition: all 0.8s ease;
   border-radius: 10px;
 }
 
 .research-interests li:hover {
-  font-size: bold;
+  /* font-weight: bold; */
   scale: 1.03;
 }
 
@@ -243,7 +243,7 @@ body {
   background-color: var(--section-bg);
   border-radius: 20px;
   color: var(--text-color);
-  transition: background-color 0.3s ease, color 0.3s ease;
+  transition: all 0.3s ease, color 0.3s ease;
 }
 
 .publication-Section {
@@ -263,7 +263,7 @@ body {
   margin-bottom: 8pt;
   color: var(--text-color);
   font-family: 'Lato', sans-serif;
-  transition: all 0.3s ease;
+  transition: all 0.8s ease;
 }
 
 .experience-item {
@@ -271,7 +271,7 @@ body {
   margin-bottom: 8pt;
   color: var(--text-color);
   font-family: 'Lato', sans-serif;
-  transition: all 0.3s ease;
+  transition: all 0.8s ease;
 }
 
 .publication-item {
@@ -279,7 +279,7 @@ body {
   margin-bottom: 8pt;
   color: var(--text-color);
   font-family: 'Lato', sans-serif;
-  transition: all 0.3s ease;
+  transition: all 0.8s ease;
 }
 
 .teaching-item {
@@ -287,12 +287,12 @@ body {
   margin-bottom: 8pt;
   color: var(--text-color);
   font-family: 'Lato', sans-serif;
-  transition: all 0.5s ease;
+  transition: all 0.8s ease;
 }
 
 .education-item:hover, .experience-item:hover, .publication-item:hover, .teaching-item:hover{
-  font-weight: bold;
-  scale:1.03;
+  /* font-weight: bold; */
+  scale: 1.03;
 }
 
 .education-item ul {
@@ -311,14 +311,18 @@ body {
   background-color: var(--section-bg);
   border-radius: 20px;
   color: var(--text-color);
-  transition: background-color 0.3s ease, color 0.3s ease;
+  transition: all 0.8s ease;
 }
 
 .bullet-list li {
   margin-bottom: 15px;
   color: var(--text-color);
   font-family: 'Lato', sans-serif;
-  transition: all 0.5s ease;
+  transition: all 0.8s ease;
+}
+
+.bullet-list li:hover {
+  scale: 1.03;
 }
 
 .skills-grid {
@@ -335,7 +339,7 @@ body {
   background-color: var(--section-bg);
   border-radius: 20px;
   color: var(--text-color);
-  transition: background-color 0.3s ease, color 0.3s ease;
+  transition: all 0.8s ease;
 }
 
 .skill-category h4 {
@@ -356,11 +360,11 @@ body {
   margin-bottom: 15px;
   color: var(--text-color);
   font-family: 'Lato', sans-serif;
-  transition: all 0.5s ease;
+  transition: all 0.8s ease;
 }
 
 .skill-category li:hover {
-  font-weight: bold;
+  /* font-weight: bold; */
   scale:1.03;
 }
 

@@ -69,8 +69,8 @@ export default function AcademicCV() {
   const navItems = [
     { id: 'research-interests', label: 'Research Interests' },
     { id: 'education', label: 'Education' },
-    { id: 'research-experiences', label: 'Research Experiences' },
     { id: 'publications', label: 'Publications' },
+    { id: 'research-experiences', label: 'Research Experiences' },
     { id: 'teaching-experiences', label: 'Teaching' },
     { id: 'skills', label: 'Skills' },
     { id: 'language-skills', label: 'Languages' },
@@ -129,7 +129,7 @@ export default function AcademicCV() {
             <a href={`tel:${resumeData.personalInfo.phone[0].replace(/\s+/g, '')}`} className="contact-link">
               {resumeData.personalInfo.phone[0]}
             </a>
-            {',    '}
+            {', '}&nbsp;
             <a href={`tel:${resumeData.personalInfo.phone[1].replace(/\s+/g, '')}`} className="contact-link">
               {resumeData.personalInfo.phone[1]}
             </a>
@@ -139,7 +139,7 @@ export default function AcademicCV() {
             <a href={`mailto:${resumeData.personalInfo.email[1]}`} className="contact-link">
               {resumeData.personalInfo.email[1]}
             </a>
-            {',    '}
+            {', '}&nbsp;
             <a href={`mailto:${resumeData.personalInfo.email[0]}`} className="contact-link">
               {resumeData.personalInfo.email[0]}
             </a>
